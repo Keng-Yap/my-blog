@@ -3,5 +3,5 @@ import { BlogComponent } from './component/blog/blog.component';
 
 export const routes: Routes = [
   { path: '', component: BlogComponent }, // 👈 default homepage route
-  { path: '**', redirectTo: '', pathMatch: 'full' } // fallback
+  { path: '**', redirectTo: 'blog', pathMatch: 'full' } // fallback
 ];
