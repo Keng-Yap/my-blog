@@ -4,9 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "build": "ng build --configuration production --output-path blog-dist --base-href /blog/",
+    "deploy": "npm run build && rmdir /s /q docs && mkdir docs && xcopy blog-dist docs /E /H /Y"
   },
   "private": true,
   "dependencies": {
