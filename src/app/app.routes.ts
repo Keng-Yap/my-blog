@@ -4,6 +4,6 @@ import { Routes } from '@angular/router';
 import { BlogComponent } from './component/blog/blog.component';
 
 export const routes: Routes = [
-    { path: 'blog', component: BlogComponent },
-    { path: '', redirectTo: 'blog', pathMatch: 'full' }
+  { path: '', component: BlogComponent }, // 👈 default route
+  { path: '**', redirectTo: '', pathMatch: 'full' } // fallback route
 ];
